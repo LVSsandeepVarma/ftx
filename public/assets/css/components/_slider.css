@@ -1,0 +1,12 @@
+/*=====================
+ 2.9 Slider Scss start
+ ==========================*/
+ [dir="rtl"] .feature-section .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    transform-origin: right top;
+    right: 0;
+    left: unset;
+  }
+  [dir="rtl"] .swiper {
+    direction: ltr;
+  }
+  

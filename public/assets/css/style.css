@@ -1,0 +1,74 @@
+/*-----------------------------------------------------------------------------------
+ Template Name:Megabot Landing
+ Template URI: themes.pixelstrap.com/multikart-app
+ Description: This is Html Landing Template
+ Author: Pixelstrap
+ Author URL: https://themeforest.net/user/pixelstrap
+ ----------------------------------------------------------------------------------- */
+/* 1.0 Variable CSS  */
+/* 1.1 Reset CSS  */
+/* 1.2 Typography CSS */
+/* 2.1 Animation CSS  */
+/* 2.2 Breadcrumb CSS */
+/* 2.3 Button CSS  */
+/* 2.4 Chatting CSS  */
+/* 2.5 Custom cursor CSS  */
+/* 2.6 Form CSS  */
+/* 2.7 Pagination CSS */
+/* 2.8 Ratio CSS */
+/* 2.9 Slider CSS */
+/* 2.10 Tabs CSS */
+/* 2.11 Tap to top CSS */
+/* 2.12 Title CSS */
+/* 3.1 Footer css */
+/* 3.2 Header CSS */
+/* 3.3 Nav CSS */
+/* 4.1 Blog CSS */
+/* 4.2 Chat CSS */
+/* 4.3 Contact CSS */
+/* 4.4 Error CSS */
+/* 4.5 Home CSS */
+/* 4.6 Login CSS*/
+@import "./base/";
+@import "./components/_animation.css";
+@import "./components/_breadcrumb.css";
+@import "./components/_chatting.css";
+@import "./components/_custom-cursor.css";
+@import "./components/_form.css";
+@import "./components/_pagination.css";
+@import "./components/_ratio.css";
+@import "./components/_slider.css";
+@import "./components/_tabs.css";
+@import "./components/_tap-top.css";
+@import "./components/_title.css";
+@import "./components/button.css";
+@import "./components/landing.css";
+@import "./base/_animations.css";
+@import "./base/_contact.css";
+@import "./base/_core.css";
+@import "./base//_chat.css";
+@import "./base/_easing.css";
+@import "./base/_header.css";
+@import "./base/_home.css";
+@import "./base/_nav.css";
+@import "./base/_reset.css";
+@import "./base/_typography.css";
+@import "./base/_variables.css";
+@import "./base/aos/_animations.css";
+@import "./base/aos/_core.css";
+@import "./base/aos/_easing.css";
+@import "./base/_footer.css";
+@import "./base/_login.css";
+@import "./landing.css";
+@import "./styleing.css"
+
+
+
+
+
+
+
+
+
+
+

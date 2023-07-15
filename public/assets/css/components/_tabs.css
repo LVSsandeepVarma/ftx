@@ -1,0 +1,42 @@
+/*=====================
+ 2.10 Tabs Scss start
+ ==========================*/
+ .tab-section {
+    background: rgba(var(--title-color));
+    backdrop-filter: blur(7px);
+    border-radius: 4px;
+    padding: 15px !important;
+    display: flex;
+    align-items: center;
+    gap: calc(14px + (22 - 14) * ((100vw - 320px) / (1920 - 320)));
+    width: max-content;
+    margin: 0 auto calc(30px + (40 - 30) * ((100vw - 320px) / (1920 - 320))) !important;
+  }
+  @media (max-width: 1400px) {
+    .tab-section {
+      overflow: auto;
+      width: 100%;
+    }
+  }
+  .tab-section li {
+    padding: calc(10px + (12 - 10) * ((100vw - 320px) / (1920 - 320))) calc(15px + (25 - 15) * ((100vw - 320px) / (1920 - 320)));
+    background: rgba(var(--title-color));
+    backdrop-filter: blur(7px);
+    border-radius: 6px;
+    transition: all 0.5s ease;
+  }
+  .tab-section li a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(var(--title-color));
+    transition: all 0.5s ease;
+    white-space: nowrap;
+  }
+  .tab-section li.active, .tab-section li:hover {
+    background-color: rgba(var(--theme-color));
+  }
+  .tab-section li.active a, .tab-section li:hover a {
+    color: #222;
+  }
+  
