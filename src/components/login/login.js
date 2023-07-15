@@ -57,7 +57,7 @@ export default function Login(props) {
           if (successMsg) {
             timeoutId = setTimeout(() => {
               setSuccessMsg("");
-            }, 30000);
+            }, 15000);
           }
       
           return () => {
@@ -71,7 +71,7 @@ export default function Login(props) {
           if (downloadErr) {
             timeoutId = setTimeout(() => {
               setDownloadErr([]);
-            }, 30000);
+            }, 15000);
           }
       
           return () => {
@@ -86,7 +86,7 @@ export default function Login(props) {
     setSuccessMsg("");
     document.body.classList.add("no-scroll");
 
-    console.log(values);
+    // console.log(values);
     try {
 
       //api call

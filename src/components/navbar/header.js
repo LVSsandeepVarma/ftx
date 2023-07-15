@@ -9,7 +9,7 @@ export default function Header(props) {
     <header  >
         
         <a href="/" >
-            <img src="../assets/images/fxLogo1.png" className="img-fluid" width={"80px"} alt="logo"/>
+            <img src="../assets/images/FX-New-Logo-Web.png" className="img-fluid" width={"75%"}  alt="logo" />
         </a>
         
         <nav className="header-nav-middle">
