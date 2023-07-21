@@ -4,11 +4,21 @@ import Footer from "../footer/footer";
 import SupportForm from "./supportForm";
 import { FiMail } from "react-icons/fi";
 import Loading from "../loader/loading";
+import { metaData } from "../metadata";
 
 export default function Support() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     // setLoading(true)
+    document.title = metaData.supportTitle;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", metaData.supportDesc); // Update the meta description tag
+    }
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute("content", metaData.supportKeywords); // Update the meta description tag
+    }
     setLoading(false);
   }, []);
   return (
@@ -22,7 +32,7 @@ export default function Support() {
             <div className="col-lg-6">
               <div className="breadcrumb-content">
                 <div>
-                  <h2  style={{marginTop:"5vh"}}>
+                  <h2 style={{ marginTop: "5vh" }}>
                     <img
                       src="../assets/images/breadcrumb-title.png"
                       className="img-fluid"
@@ -51,7 +61,7 @@ export default function Support() {
         </div>
       </section>
       {/* <!-- breadcrumb section end --> */}
-      
+
       {/* contact us section start  */}
       <section className="contact-section pb-md-5 pb-0">
         <div
@@ -98,9 +108,36 @@ export default function Support() {
                 />
               </div>
               <h3>Address </h3>
-              <p style={{padding:0, margin:0, textAlign:"center", width:"100%"}}>No.51, The Signature Building,</p>
-              <p style={{padding:0, margin:0, textAlign:"center", width:"100%"}}>Changi Business Park Central 2, No.04-05,</p>
-              <p style={{padding:0, margin:0, textAlign:"center", width:"100%"}}>The Signature, Singapore - 486066.</p>
+              <p
+                style={{
+                  padding: 0,
+                  margin: 0,
+                  textAlign: "center",
+                  width: "100%",
+                }}
+              >
+                No.51, The Signature Building,
+              </p>
+              <p
+                style={{
+                  padding: 0,
+                  margin: 0,
+                  textAlign: "center",
+                  width: "100%",
+                }}
+              >
+                Changi Business Park Central 2, No.04-05,
+              </p>
+              <p
+                style={{
+                  padding: 0,
+                  margin: 0,
+                  textAlign: "center",
+                  width: "100%",
+                }}
+              >
+                The Signature, Singapore - 486066.
+              </p>
             </li>
             <li>
               <div class="contact-icon">
@@ -124,7 +161,6 @@ export default function Support() {
           </p>
           <div className="row g-lg-5 g-4">
             <div className="col-xl-7 col-lg-6">
-              
               <SupportForm />
             </div>
             <div className="col-xl-5 col-lg-6">

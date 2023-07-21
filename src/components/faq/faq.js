@@ -2,11 +2,21 @@ import React, { useEffect, useState } from "react";
 import Header from "../navbar/header";
 import Footer from "../footer/footer";
 import Loading from "../loader/loading";
+import { metaData } from "../metadata";
 
 export default function Faq() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     // setLoading(true)
+    document.title = metaData.faqTitle;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", metaData.faqDesc); // Update the meta description tag
+    }
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute("content", metaData.faqKeywords); // Update the meta description tag
+    }
     setLoading(false);
   }, []);
   return (
@@ -20,7 +30,7 @@ export default function Faq() {
             <div class="col-lg-6">
               <div class="breadcrumb-content">
                 <div>
-                  <h2 style={{marginTop:"5vh"}}>
+                  <h2 style={{ marginTop: "5vh" }}>
                     <img
                       src="../assets/images/breadcrumb-title.png"
                       className="img-fluid"

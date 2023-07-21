@@ -3,11 +3,21 @@ import Header from "../navbar/header";
 import Footer from "../footer/footer";
 import Login from "../login/login";
 import Loading from "../loader/loading";
+import { metaData } from "../metadata";
 
 export default function Contactus() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     // setLoading(true)
+    document.title = metaData.contactTitle;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", metaData.contactDesc); // Update the meta description tag
+    }
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute("content", metaData.contactKeywords); // Update the meta description tag
+    }
     setLoading(false);
   }, []);
   return (
@@ -15,13 +25,13 @@ export default function Contactus() {
       {loading && <Loading />}
       <Header currentPage="contact" />
       {/* <!-- breadcrumb section start --> */}
-      <section class="breadcrumb-section" >
+      <section class="breadcrumb-section">
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
               <div class="breadcrumb-content">
                 <div>
-                  <h2 style={{marginTop:"5vh"}}>
+                  <h2 style={{ marginTop: "5vh" }}>
                     <img
                       src="../assets/images/breadcrumb-title.png"
                       className="img-fluid"
@@ -109,8 +119,12 @@ export default function Contactus() {
           </ul>
         </div>
         <div
-          className="  " 
-          style={{ display: "flex", justifyContent: "center", marginTop:"35px" }}
+          className="  "
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "35px",
+          }}
         >
           <div className="col-sm-10 col-md-10 col-lg-8">
             <Login currentPage="contact" />

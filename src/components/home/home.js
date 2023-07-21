@@ -28,13 +28,13 @@ export default function Home() {
 const delay = 4000; // 2 seconds
 
 // Pause the video initially
-video.pause();
+// video.pause();
 
 // Wait for the delay duration
-setTimeout(function() {
-  // Play the video after the delay
-  video.play();
-}, delay);
+// setTimeout(function() {
+//   // Play the video after the delay
+//   video.play();
+// }, delay);
     setLoading(false);
     document.body.classList.remove("no-scroll");
   }, []);
@@ -837,7 +837,34 @@ setTimeout(function() {
               Live Daily Results of Auto Trading{" "}
             </h3> */}
             <div _ngcontent-vth-c7="" className="bar"></div>
-            <Video/>
+            {/* <Video/> */}
+            <div class="home-laptop px-md-0 px-3" style={{textAlign:"center"}}>
+                        <div class="laptop-sec position-relative" style={{display:"flex", justifyContent:"center"}}>
+                            {/* <div class="hand-sec">
+                                <img src="../assets/images/home/hand.png" class="img-fluid left-hand" alt="hand"/>
+                                <img src="../assets/images/home/hand.png" class="img-fluid right-hand" alt="hand"/>
+                                <img src="../assets/images/home/finger.png" class="img-fluid left-finger" alt="hand"/>
+                                <img src="../assets/images/home/finger.png" class="img-fluid right-finger" alt="hand"/>
+                            </div> */}
+                            <img src="../assets/images/home/laptop.png" class="img-fluid laptop-img" alt="laptop" width={"80%"}/>
+                        </div>
+                        <div class="home-info">
+                            {/* <ul class="info-list">
+                                <li>Ask anything </li>
+                                <li>Generate image</li>
+                                <li>Translate anything</li>
+                            </ul> */}
+                            <ul class="star-rating">
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                                <li><i class="ri-star-fill"></i></li>
+                            </ul>
+                            <h4>A technique to write
+                                all of your material 10 times more quickly.</h4>
+                        </div>
+                    </div>
           </div>
         </div>
         <div className="pagination-effect">
@@ -847,7 +874,9 @@ setTimeout(function() {
             alt=""
           />
         </div>
-        <div className="swiper-pagination feature-pagination"></div>
+        <div className="swiper-pagination feature-pagination">
+        <span class="swiper-pagination-progressbar-fill" style={{transform: "translate3d(0px, 0px, 0px) scaleX(0.333333) scaleY(1)", transitionDuration: "300ms"}}></span>
+        </div>
       </section>
       {/* <!-- feature section end --> */}
 

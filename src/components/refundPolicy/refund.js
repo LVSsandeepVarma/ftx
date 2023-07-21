@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../navbar/header";
 import Footer from "../footer/footer";
+import { metaData } from "../metadata";
 
 export default function Refund() {
+  useEffect(() => {
+    document.title = metaData.refuncTitle;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", metaData.refundDesc); // Update the meta description tag
+    }
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute("content", metaData.refundKeywords); // Update the meta description tag
+    }
+  }, []);
   return (
     <>
       <Header />
@@ -81,12 +93,31 @@ export default function Refund() {
                     trading history, journal and expert history exporting from
                     your MT4 platform in PDF OR HTML extension for the
                     particular account through email. The email should be sent
-                    to <a href="mailto:install@autotradingdownload.com">install@autotradingdownload.com</a> from the same
-                    email Address what was provided in the Expert coding form.
+                    to{" "}
+                    <a href="mailto:install@autotradingdownload.com">
+                      install@autotradingdownload.com
+                    </a>{" "}
+                    from the same email Address what was provided in the Expert
+                    coding form.
                   </p>
-                  <p>Please allow up to 72 hrs to our team to review your details and process your refund or transfer of license request depending on the nature of inquiry. Our support team will contact you to confirm that your refund/transfer has been processed or to ask for any additional information if needed.</p>
-                    <p>All refunds will be issued through the same mode of payment in which they are made at the time of purchase. Please allow 7-14 working days for processing your request and for the refund to be credited to your account.</p>
-                    <p>If you have any further questions or concerns, we are happy to assist you through our support desk.</p>
+                  <p>
+                    Please allow up to 72 hrs to our team to review your details
+                    and process your refund or transfer of license request
+                    depending on the nature of inquiry. Our support team will
+                    contact you to confirm that your refund/transfer has been
+                    processed or to ask for any additional information if
+                    needed.
+                  </p>
+                  <p>
+                    All refunds will be issued through the same mode of payment
+                    in which they are made at the time of purchase. Please allow
+                    7-14 working days for processing your request and for the
+                    refund to be credited to your account.
+                  </p>
+                  <p>
+                    If you have any further questions or concerns, we are happy
+                    to assist you through our support desk.
+                  </p>
                 </div>
               </div>
             </div>

@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../navbar/header";
 import Footer from "../footer/footer";
-
+import { metaData } from "../metadata";
 export default function Terms() {
+  useEffect(()=>{
+    document.title=metaData.termsTitle;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', metaData.termsDesc); // Update the meta description tag
+    }
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', metaData.termsKeywords); // Update the meta description tag
+    }
+  },[])
   return (
     <>
       <Header />

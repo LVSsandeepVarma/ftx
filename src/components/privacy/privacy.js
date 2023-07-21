@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "../footer/footer";
 import Header from "../navbar/header";
+import { metaData } from "../metadata";
 
 export default function Privacy() {
+  useEffect(() => {
+    document.title = metaData.privacyTitle;
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", metaData.privacyDesc); // Update the meta description tag
+    }
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute("content", metaData.privacyKeywords); // Update the meta description tag
+    }
+  }, []);
   return (
     <>
       <Header />
@@ -726,7 +738,10 @@ export default function Privacy() {
                     efforts to respond to you as soon as possible.
                   </p>
                   <p>Our postal address is:</p>
-                  <p>No.51, The Signature Building, Changi Business Park Central 2, No.04-05, The Signature, Singapore - 486066.</p>
+                  <p>
+                    No.51, The Signature Building, Changi Business Park Central
+                    2, No.04-05, The Signature, Singapore - 486066.
+                  </p>
                 </div>
               </div>
             </div>

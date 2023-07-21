@@ -140,7 +140,7 @@ const handleToggleLinkTwo = ()=>{
           {/* </div> */}
         </div>
         <div className="footer-copyright">
-          <h4 style={{margin:"0"}}>@2023 All the Copyright Reserved.</h4>
+          <h4 style={{margin:"0"}}>Copyrights © 2023 All Rights Reserved by FX Trading.</h4>
           <ul className="footer-links">
           <li>
               <a href="/support">Support</a>
